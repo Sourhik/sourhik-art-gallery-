@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================================================
+   THEME DESIGN SYSTEM - 9 LUXURY THEMES (4 DARK & 5 BRIGHT)
+   ========================================================================== */
+
+/* 1. Dark Obsidian (Default Dark) */
+:root, [data-theme="dark"] {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-app: #0b0f19;
+  --bg-card: #111827;
+  --bg-card-hover: #1f293d;
+  --bg-navbar: rgba(11, 15, 25, 0.95);
+  --bg-input: #1e293b;
+  --bg-modal: #111827;
+  --bg-hero: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0b0f19 75%);
+  
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-heading: #ffffff;
+  --text-primary: #818cf8;
+  
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-focus: #818cf8;
+  
+  --primary-accent: #6366f1;
+  --primary-rgb: 99, 102, 241;
+  --primary-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  --badge-bg: rgba(99, 102, 241, 0.2);
+  --shadow-custom: 0 12px 30px -6px rgba(0, 0, 0, 0.6);
+
+  --dropdown-bg: #111827;
+  --dropdown-color: #f8fafc;
+  --dropdown-hover: #1e293b;
+  --dropdown-border: rgba(255, 255, 255, 0.12);
+}
+
+/* 2. Cyber Violet (Dark Neon / Cyberpunk) */
+[data-theme="cyber"] {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-app: #0c071e;
+  --bg-card: #160d33;
+  --bg-card-hover: #261556;
+  --bg-navbar: rgba(12, 7, 30, 0.95);
+  --bg-input: #23144e;
+  --bg-modal: #160d33;
+  --bg-hero: radial-gradient(circle at 50% 0%, #4a044e 0%, #0c071e 75%);
+  
+  --text-main: #faf5ff;
+  --text-muted: #c084fc;
+  --text-heading: #ffffff;
+  --text-primary: #ec4899;
+  
+  --border-color: rgba(236, 72, 153, 0.22);
+  --border-focus: #ec4899;
+  
+  --primary-accent: #ec4899;
+  --primary-rgb: 236, 72, 153;
+  --primary-gradient: linear-gradient(135deg, #ec4899 0%, #a855f7 100%);
+  --badge-bg: rgba(236, 72, 153, 0.2);
+  --shadow-custom: 0 12px 30px -6px rgba(236, 72, 153, 0.35);
+
+  --dropdown-bg: #160d33;
+  --dropdown-color: #faf5ff;
+  --dropdown-hover: #261556;
+  --dropdown-border: rgba(236, 72, 153, 0.3);
+}
+
+/* 3. Emerald Luxe (Dark Luxury Emerald) */
+[data-theme="emerald"] {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-app: #041711;
+  --bg-card: #08241b;
+  --bg-card-hover: #0f382b;
+  --bg-navbar: rgba(4, 23, 17, 0.95);
+  --bg-input: #0f382b;
+  --bg-modal: #08241b;
+  --bg-hero: radial-gradient(circle at 50% 0%, #064e3b 0%, #041711 75%);
+  
+  --text-main: #ecfdf5;
+  --text-muted: #6ee7b7;
+  --text-heading: #ffffff;
+  --text-primary: #34d399;
+  
+  --border-color: rgba(52, 211, 153, 0.22);
+  --border-focus: #34d399;
+  
+  --primary-accent: #10b981;
+  --primary-rgb: 16, 185, 129;
+  --primary-gradient: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+  --badge-bg: rgba(16, 185, 129, 0.2);
+  --shadow-custom: 0 12px 30px -6px rgba(16, 185, 129, 0.3);
+
+  --dropdown-bg: #08241b;
+  --dropdown-color: #ecfdf5;
+  --dropdown-hover: #0f382b;
+  --dropdown-border: rgba(52, 211, 153, 0.3);
+}
+
+/* 4. Sunset Coral (Dark Velvet Twilight) */
+[data-theme="sunset"] {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-app: #180a11;
+  --bg-card: #28101d;
+  --bg-card-hover: #3d172c;
+  --bg-navbar: rgba(24, 10, 17, 0.95);
+  --bg-input: #3d172c;
+  --bg-modal: #28101d;
+  --bg-hero: radial-gradient(circle at 50% 0%, #831843 0%, #180a11 75%);
+  
+  --text-main: #fff1f2;
+  --text-muted: #fda4af;
+  --text-heading: #ffffff;
+  --text-primary: #fb7185;
+  
+  --border-color: rgba(251, 113, 133, 0.22);
+  --border-focus: #fb7185;
+  
+  --primary-accent: #f43f5e;
+  --primary-rgb: 244, 63, 94;
+  --primary-gradient: linear-gradient(135deg, #f43f5e 0%, #fb923c 100%);
+  --badge-bg: rgba(244, 63, 94, 0.2);
+  --shadow-custom: 0 12px 30px -6px rgba(244, 63, 94, 0.35);
+
+  --dropdown-bg: #28101d;
+  --dropdown-color: #fff1f2;
+  --dropdown-hover: #3d172c;
+  --dropdown-border: rgba(251, 113, 133, 0.3);
+}
+
+/* 5. Sunlit Pearl (Bright Clean Minimal) */
+[data-theme="light"] {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-navbar: rgba(255, 255, 255, 0.95);
+  --bg-input: #ffffff;
+  --bg-modal: #ffffff;
+  --bg-hero: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%);
+  
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-heading: #0f172a;
+  --text-primary: #0284c7;
+  
+  --border-color: rgba(15, 23, 42, 0.12);
+  --border-focus: #0284c7;
+  
+  --primary-accent: #0284c7;
+  --primary-rgb: 2, 132, 199;
+  --primary-gradient: linear-gradient(135deg, #0284c7 0%, #6366f1 100%);
+  --badge-bg: rgba(2, 132, 199, 0.12);
+  --shadow-custom: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+
+  --dropdown-bg: #ffffff;
+  --dropdown-color: #0f172a;
+  --dropdown-hover: #f1f5f9;
+  --dropdown-border: rgba(15, 23, 42, 0.15);
+}
+
+/* 6. Lavender Blossom (Bright Pastel Purple) */
+[data-theme="lavender"] {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-app: #faf5ff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f5f3ff;
+  --bg-navbar: rgba(255, 255, 255, 0.95);
+  --bg-input: #ffffff;
+  --bg-modal: #ffffff;
+  --bg-hero: linear-gradient(135deg, #f3e8ff 0%, #faf5ff 100%);
+  
+  --text-main: #3b0764;
+  --text-muted: #7e22ce;
+  --text-heading: #3b0764;
+  --text-primary: #9333ea;
+  
+  --border-color: rgba(147, 51, 234, 0.15);
+  --border-focus: #9333ea;
+  
+  --primary-accent: #9333ea;
+  --primary-rgb: 147, 51, 234;
+  --primary-gradient: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+  --badge-bg: rgba(147, 51, 234, 0.12);
+  --shadow-custom: 0 10px 25px -5px rgba(147, 51, 234, 0.12);
+
+  --dropdown-bg: #ffffff;
+  --dropdown-color: #3b0764;
+  --dropdown-hover: #f5f3ff;
+  --dropdown-border: rgba(147, 51, 234, 0.2);
+}
+
+/* 7. Ocean Breeze (Bright Coastal Aqua) */
+[data-theme="ocean"] {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-app: #f0fdfa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0fdfa;
+  --bg-navbar: rgba(255, 255, 255, 0.95);
+  --bg-input: #ffffff;
+  --bg-modal: #ffffff;
+  --bg-hero: linear-gradient(135deg, #ccfbf1 0%, #f0fdfa 100%);
+  
+  --text-main: #134e4a;
+  --text-muted: #0f766e;
+  --text-heading: #134e4a;
+  --text-primary: #0d9488;
+  
+  --border-color: rgba(13, 148, 136, 0.15);
+  --border-focus: #0d9488;
+  
+  --primary-accent: #0d9488;
+  --primary-rgb: 13, 148, 136;
+  --primary-gradient: linear-gradient(135deg, #0d9488 0%, #0284c7 100%);
+  --badge-bg: rgba(13, 148, 136, 0.12);
+  --shadow-custom: 0 10px 25px -5px rgba(13, 148, 136, 0.12);
+
+  --dropdown-bg: #ffffff;
+  --dropdown-color: #134e4a;
+  --dropdown-hover: #ccfbf1;
+  --dropdown-border: rgba(13, 148, 136, 0.2);
+}
+
+/* 8. Amber Sunset (Bright Golden Warmth) */
+[data-theme="amber"] {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-app: #fffbeb;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fef3c7;
+  --bg-navbar: rgba(255, 255, 255, 0.95);
+  --bg-input: #ffffff;
+  --bg-modal: #ffffff;
+  --bg-hero: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%);
+  
+  --text-main: #78350f;
+  --text-muted: #92400e;
+  --text-heading: #78350f;
+  --text-primary: #d97706;
+  
+  --border-color: rgba(217, 119, 6, 0.18);
+  --border-focus: #d97706;
+  
+  --primary-accent: #d97706;
+  --primary-rgb: 217, 119, 6;
+  --primary-gradient: linear-gradient(135deg, #d97706 0%, #f97316 100%);
+  --badge-bg: rgba(217, 119, 6, 0.12);
+  --shadow-custom: 0 10px 25px -5px rgba(217, 119, 6, 0.12);
+
+  --dropdown-bg: #ffffff;
+  --dropdown-color: #78350f;
+  --dropdown-hover: #fef3c7;
+  --dropdown-border: rgba(217, 119, 6, 0.25);
+}
+
+/* 9. Sage Garden (Bright Botanic Green) */
+[data-theme="sage"] {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-app: #f0fdf4;
+  --bg-card: #ffffff;
+  --bg-card-hover: #dcfce7;
+  --bg-navbar: rgba(255, 255, 255, 0.95);
+  --bg-input: #ffffff;
+  --bg-modal: #ffffff;
+  --bg-hero: linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%);
+  
+  --text-main: #14532d;
+  --text-muted: #15803d;
+  --text-heading: #14532d;
+  --text-primary: #16a34a;
+  
+  --border-color: rgba(22, 163, 74, 0.18);
+  --border-focus: #16a34a;
+  
+  --primary-accent: #16a34a;
+  --primary-rgb: 22, 163, 74;
+  --primary-gradient: linear-gradient(135deg, #16a34a 0%, #0d9488 100%);
+  --badge-bg: rgba(22, 163, 74, 0.12);
+  --shadow-custom: 0 10px 25px -5px rgba(22, 163, 74, 0.12);
+
+  --dropdown-bg: #ffffff;
+  --dropdown-color: #14532d;
+  --dropdown-hover: #dcfce7;
+  --dropdown-border: rgba(22, 163, 74, 0.25);
+}
+
+/* ==========================================================================
+   BASE & TYPOGRAPHY APPLICATION RULES
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: var(--text-heading);
+  font-weight: 700;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Modals */
+.modal-content,
+.custom-modal .modal-content {
+  background-color: var(--bg-modal) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 1.25rem !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border-color) !important;
+}
+
+/* Custom Dropdown Menus */
+.dropdown-menu,
+.custom-theme-menu {
+  background-color: var(--dropdown-bg) !important;
+  color: var(--dropdown-color) !important;
+  border: 1px solid var(--dropdown-border) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35) !important;
+  border-radius: 0.875rem !important;
+}
+
+.dropdown-item {
+  color: var(--dropdown-color) !important;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--dropdown-hover) !important;
+  color: var(--dropdown-color) !important;
+}
+
+.dropdown-item.active {
+  background-color: var(--badge-bg) !important;
+  color: var(--primary-accent) !important;
+}
+
+/* Form inputs */
+.form-control,
+.form-select,
+.bg-theme-input,
+input[type="text"],
+input[type="search"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+textarea {
+  background-color: var(--bg-input) !important;
+  color: var(--text-main) !important;
+  border: 1.5px solid var(--border-color) !important;
+}
+
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.7 !important;
+}
+
+/* Custom Navbar Styling */
+.bg-custom-navbar {
+  background-color: var(--bg-navbar) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color) !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.brand-icon-wrapper {
+  width: 38px;
+  height: 38px;
+  background: var(--primary-gradient);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease;
+}
+
+.navbar-brand:hover .brand-icon-wrapper {
+  transform: scale(1.05) rotate(-3deg);
+}
+
+.brand-text {
+  letter-spacing: -0.5px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff !important;
+}
+
+.navbar-search-form .input-group {
+  transition: all 0.25s ease;
+}
+
+.navbar-search-form .input-group:focus-within {
+  border-color: var(--border-focus) !important;
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.25) !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Card Styling */
+.custom-card {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, background-color 0.35s ease;
+  border-radius: 1.25rem !important;
+}
+
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-custom) !important;
+  background-color: var(--bg-card-hover) !important;
+}
+
+.custom-card .card-title {
+  color: var(--text-main);
+}
+
+.custom-card .card-text {
+  color: var(--text-muted) !important;
+}
+
+/* Card Image Wrapper & Zoom */
+.card-img-wrapper {
+  height: 240px;
+  position: relative;
+  cursor: pointer;
+  background-color: #000000;
+}
+
+.custom-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-card:hover .custom-card-img {
+  transform: scale(1.09);
+}
+
+/* Card Image Overlay on Hover */
+.card-img-overlay-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-img-wrapper:hover .card-img-overlay-hover {
+  opacity: 1;
+}
+
+/* Backdrop blur helper */
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+}
+
+.backdrop-blur-bg {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Typography & Helpers */
+.fs-7 {
+  font-size: 0.8125rem;
+}
+
+.fs-8 {
+  font-size: 0.75rem;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.max-w-md {
+  max-width: 480px;
+}
+
+.max-w-2xl {
+  max-width: 650px;
+}
+
+.max-w-lg {
+  max-width: 500px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fav-btn {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.fav-btn:hover {
+  transform: scale(1.18);
+}
+
+/* Primary Color overrides */
+.btn-primary {
+  background: var(--primary-gradient) !important;
+  border: none !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.text-primary {
+  color: var(--primary-accent) !important;
+}
+
+.bg-primary {
+  background: var(--primary-accent) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-accent) !important;
+}
+
+.text-primary-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero Section Background */
+.gallery-hero {
+  background: var(--bg-hero) !important;
+}
+
+.hero-preview-stack img {
+  border: 4px solid var(--border-color);
+  transform: rotate(2deg);
+  transition: transform 0.4s ease;
+}
+
+.hero-preview-stack:hover img {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* Containers & Cards dynamic backgrounds */
+.bg-theme-card {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.bg-theme-input {
+  background-color: var(--bg-input) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}
+
+
+/* ==========================================================================
+   NATURAL FORM CONTROL STYLING
+   ========================================================================== */
+
+/* Natural Input Fields */
+.form-control, .form-select {
+  background-color: var(--bg-input) !important;
+  color: var(--text-main) !important;
+  border: 1.5px solid var(--border-color) !important;
+  border-radius: 0.75rem !important;
+  padding: 0.75rem 1rem;
+  transition: all 0.25s ease-in-out;
+  box-shadow: none !important;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-accent) !important;
+  box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.15) !important;
+  background-color: var(--bg-input) !important;
+  color: var(--text-main) !important;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 0.65;
+}
+
+/* Natural Input Groups */
+.input-group .form-control, .input-group .input-group-text {
+  border-color: var(--border-color) !important;
+}
+
+.input-group-text {
+  background-color: var(--bg-input) !important;
+  color: var(--text-muted) !important;
+}
+
+/* Natural Upload Dropzone */
+.natural-dropzone {
+  background: var(--bg-input) !important;
+  border: 2px dashed var(--border-color) !important;
+  border-radius: 1.25rem !important;
+  padding: 2.2rem 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.natural-dropzone:hover {
+  border-color: var(--primary-accent) !important;
+  background: rgba(var(--primary-rgb), 0.04) !important;
+  transform: translateY(-2px);
+}
+
+.dropzone-icon-circle {
+  width: 64px;
+  height: 64px;
+  background: rgba(var(--primary-rgb), 0.12);
+  color: var(--primary-accent);
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.natural-dropzone:hover .dropzone-icon-circle {
+  transform: scale(1.1);
+}
+
+/* Natural Preset Chips */
+.preset-chip {
+  background-color: var(--bg-input);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  border-radius: 50rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.preset-chip:hover {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
+/* Category Pill Styling */
+.category-pill {
+  background-color: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.category-pill.active, .category-pill:hover {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-card-hover);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-accent);
+}
+
+/* ==========================================================================
+   INTERACTIVE STORIES, PUZZLE BOARD & MEMORY BOX DESIGN UTILITIES
+   ========================================================================== */
+
+/* Gradient button */
+.btn-gradient-primary {
+  background: var(--primary-gradient, linear-gradient(135deg, #6366f1, #a855f7));
+  color: #ffffff;
+  border: none;
+}
+.btn-gradient-primary:hover {
+  filter: brightness(1.1);
+  color: #ffffff;
+}
+
+/* Utility: hide scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hover card effects */
+.hover-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45) !important;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+.hover-card-primary:hover {
+  background-color: rgba(99, 102, 241, 0.12) !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Timeline road connector */
+.timeline-spine {
+  width: 3px;
+  background: linear-gradient(to bottom, #6366f1, #ec4899, #10b981);
+}
+
+/* Spin animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin {
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+

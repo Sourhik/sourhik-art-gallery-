@@ -1,0 +1,59 @@
+/* App global responsive layout rules */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.min-h-400 {
+  min-height: 400px;
+}
+
+.modal-large-img {
+  max-height: 75vh;
+  width: auto;
+  object-fit: contain;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.empty-icon-circle {
+  width: 80px;
+  height: 80px;
+}
+
+/* Modal styling overrides */
+.custom-modal .modal-content {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .border-end-md {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Category bar scrollbar hiding */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.fs-8 {
+  font-size: 0.75rem;
+}
+
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
